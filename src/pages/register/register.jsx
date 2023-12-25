@@ -52,7 +52,7 @@ export const Register = () => {
               }
             }
           })
-          .finally(setLoading(false));
+          .finally(() => setLoading(false));
       }
   };
 

@@ -15,7 +15,7 @@ export const Login = () => {
   const submit = async () => {
     setLoading(true);
     var request = new Request({});
-
+    
     await request.axios_request
       .post("/Auth/Login", { email: email, password: password })
       .then((response) => {
@@ -44,7 +44,7 @@ export const Login = () => {
           }
         }
       })
-      .finally(setLoading(false));
+      .finally(() => setLoading(false))
   };
 
   return (
