@@ -19,10 +19,10 @@ function MainSection() {
 
   useEffect(() => {
     getLectures();
-    getAppeals();
-    getAnnouncements();
-    getExams();
-    getSurveys();
+    //getAppeals();
+    //getAnnouncements();
+    //getExams();
+    //getSurveys();
   }, []);
 
   const getLectures = async () => {
@@ -62,8 +62,8 @@ function MainSection() {
 
   return (
     <section>
-      <div className="container">
-        <div className="row cv-box cv-padding display-flex mmt-n-4">
+      <div className="container d-flex align-items-center justify-content-center">
+        <div className="row cv-box cv-padding display-flex mmt-n-4 main-section">
           <div className="col-12 ik-logo-platform">
             <div className="p-4">
               <span className="tobeto-main-logo">
@@ -154,9 +154,23 @@ function MainSection() {
               {section == 1 && (
                 <div class="tab-pane fade show active">
                   <div className="grid-container">
-                    {lectures.map((lecture) => (
-                      <Lecture lecture={lecture}></Lecture>
-                    ))}
+                    {lectures.map((lecture) => {
+                      return <Lecture lecture={lecture}></Lecture>
+})}
+                    {lectures.map((lecture) => {
+                      return <Lecture lecture={lecture}></Lecture>
+                    })}
+                    {lectures.map((lecture) => {
+                      return <Lecture lecture={lecture}></Lecture>
+                    })}
+                    {lectures.map((lecture) => {
+                      return <Lecture lecture={lecture}></Lecture>
+                    })}
+                    {lectures.map((lecture) => {
+                      return <Lecture lecture={lecture}></Lecture>
+                    })}
+
+                  
                   </div>
                   <a class="showMoreBtn">
                     Daha Fazla Göster <Link to="/egitimlerim"></Link>

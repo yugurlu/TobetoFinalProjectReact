@@ -3,7 +3,7 @@ import "./lecture.css";
 
 export const Lecture = (props) => {
   return (
-    <div class="col-md-3">
+    <div class="d-flex align-items-center justify-content-center">
       <div class="edu-card">
         <img
           class="card-imgg"

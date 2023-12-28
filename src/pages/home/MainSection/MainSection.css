@@ -1,3 +1,10 @@
+
+.main-section
+{ 
+    width: 92%;
+    margin: auto;
+}
+
 .my-2 {
     margin-top: 0.5rem!important;
     margin-bottom: 0.5rem!important;
