@@ -176,14 +176,14 @@ li {
     font-size: 22px;
 }
 
-.mainTablist .nav-item .nav-link.active {
+.mainTablist .nav-item .nav-link:focus {
     color: #282828;
     background-color: transparent;
     border: none;
     position: relative;
 }
 
-.mainTablist .nav-item .nav-link.active:after {
+.mainTablist .nav-item .nav-link:focus:after {
     content: "";
     width: 100%;
     height: 0.2em;
@@ -193,4 +193,11 @@ li {
     bottom: 0;
     left: 0;
     box-shadow: 0 0 11px hsla(0,0%,100%,.5);
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
 }

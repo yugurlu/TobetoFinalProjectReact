@@ -10,25 +10,22 @@ export const Home = () => {
     <div>
       <Navbar />
       <div className="welcome-message container text-center">
+        <h3 className="spans-elements">
+          <span className="tobete-text-secondary">TOBETO</span>
+          <span className="sub-text-name">'ya hoş geldin <br /> {userInfo.name}
+          </span>
+        </h3>
         <div>
-          <div>
-            <h3 className="spans-elements">
-              <span className="tobete-text-secondary">TOBETO</span>
-              <span className="sub-text-name">'ya hoş geldin <br /> {userInfo.name}
-              </span>
-            </h3>
-          </div>
-          <div>
-            <h4>
-              <p>
-                Yeni nesil öğrenme deneyimi ile Tobeto kariyer yolculuğunda senin yanında!
-              </p>
-            </h4>
-          </div>
+          <h4>
+            <p>
+              Yeni nesil öğrenme deneyimi ile Tobeto kariyer yolculuğunda senin
+              yanında!
+            </p>
+          </h4>
         </div>
       </div>
       <MainSection />
-      <Footer/>
+      <Footer />
     </div>
   );
 };
