@@ -155,22 +155,8 @@ function MainSection() {
                 <div class="tab-pane fade show active">
                   <div className="grid-container">
                     {lectures.map((lecture) => {
-                      return <Lecture lecture={lecture}></Lecture>
-})}
-                    {lectures.map((lecture) => {
-                      return <Lecture lecture={lecture}></Lecture>
+                      return <Lecture lecture={lecture}></Lecture>;
                     })}
-                    {lectures.map((lecture) => {
-                      return <Lecture lecture={lecture}></Lecture>
-                    })}
-                    {lectures.map((lecture) => {
-                      return <Lecture lecture={lecture}></Lecture>
-                    })}
-                    {lectures.map((lecture) => {
-                      return <Lecture lecture={lecture}></Lecture>
-                    })}
-
-                  
                   </div>
                   <a class="showMoreBtn">
                     Daha Fazla Göster <Link to="/egitimlerim"></Link>

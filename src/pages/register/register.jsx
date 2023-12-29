@@ -4,150 +4,129 @@ import { ToastContainer, toast } from "react-toastify";
 import "./register.css";
 import "react-toastify/dist/ReactToastify.css";
 import Request from "../../utilities/axios/axios";
+import { ErrorMessage, Field, Form, Formik } from "formik";
+import { object, ref, string } from "yup";
+import FormikInput from "../../components/FormikInput/FormikInput";
 
 export const Register = () => {
   const navigate = useNavigate();
-
-  const [name, setName] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [passwordAgain, setPasswordAgain] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const submit = async () => {
-    setLoading(true);
-    var request = new Request({});
-
-    if (passwordControl()) {
-        await request.axios_request
-          .post("/Students", {
-            firstName: name,
-            lastName: lastname,
-            email: email,
-            password: password,
-          })
-          .then((response) => {
-            localStorage.setItem("user",
-              JSON.stringify({
-                name: response.data.userFirstName,
-                lastName: response.data.userLastName,
-                id: response.data.studentId,
-              })
-            );
-            navigate("/");
-          })
-          .catch((error) => {
-            if (error.response && error.response.data) {
-              const errorMessage = error.response.data;
-              const colonIndex = errorMessage.indexOf(":");
-              if (colonIndex !== -1) {
-                const nextLineIndex = errorMessage.indexOf("\n", colonIndex);
-                if (nextLineIndex !== -1) {
-                  const specificErrorMessage = errorMessage
-                    .substring(colonIndex + 1, nextLineIndex)
-                    .trim(); //
-                  toast(specificErrorMessage);
-                }
-              }
-            }
-          })
-          .finally(() => setLoading(false));
-      }
+  const initialValues = {
+    name: "",
+    lastname: "",
+    email: "",
+    password: "",
+    password: "",
+    retypePassword: "",
   };
 
-  const passwordControl = () => {
-    if (!password.length || !password.length) {
-      toast("Lütfen Tüm Alanları Doldurunuz.");
-      return false;
-    } else if (password != passwordAgain) {
-      toast("Şifreler Eşleşmedi.");
-      return false;
-    }
-    return true;
+  const validationSchema = object({
+    name: string().required("Doldurulması zorunlu alan*"),
+    lastname: string().required("Doldurulması zorunlu alan*"),
+    email: string()
+      .email("Geçersiz e-posta adresi*")
+      .required("Doldurulması zorunlu alan*"),
+    password: string().required("Doldurulması zorunlu alan*"),
+    retypePassword: string()
+      .required("Doldurulması zorunlu alan*")
+      .oneOf([ref("password")], "Şifreler Eslesmiyor"),
+  });
+
+  const submit = async () => {
+    //setLoading(true);
+    //var request = new Request({});
+    //if (passwordControl()) {
+    //    await request.axios_request
+    //      .post("/Students", {
+    //        firstName: name,
+    //        lastName: lastname,
+    //        email: email,
+    //        password: password,
+    //      })
+    //      .then((response) => {
+    //        localStorage.setItem("user",
+    //          JSON.stringify({
+    //            name: response.data.userFirstName,
+    //            lastName: response.data.userLastName,
+    //            id: response.data.studentId,
+    //          })
+    //        );
+    //        navigate("/");
+    //      })
+    //      .catch((error) => {
+    //        toast("Bu Maile Ait Bir Kullanici Zaten Var");
+    //      })
+    //      .finally(() => setLoading(false));
+    //  }
   };
 
   return (
     <div className="register-base">
       <div className="register">
-        <div>
-          <img
-            className="register-img"
-            src="https://tobeto.com/_next/static/media/tobeto-logo.29b55e1c.svg"
-          />
-        </div>
-        <div>
-          <h1>Hemen Kayıt Ol</h1>
-        </div>
-        <div className="register-events">
-          <div>
-            <input
-              class="register-input"
-              id="name"
-              placeholder="Ad*"
-              onChange={(e) => setName(e.target.value)}
-            ></input>
-          </div>
-          <div>
-            <input
-              class="register-input"
-              id="lastname"
-              placeholder="Soyad*"
-              onChange={(e) => setLastname(e.target.value)}
-            ></input>
-          </div>
-          <div>
-            <input
-              type="email"
-              class="register-input"
-              id="email"
-              placeholder="E-posta*"
-              onChange={(e) => setEmail(e.target.value)}
-            ></input>
-          </div>
-          <div>
-            <input
-              type="password"
-              class="register-input"
-              id="password"
-              placeholder="Sifre*"
-              required
-              onChange={(e) => setPassword(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && submit()}
-            ></input>
-          </div>
-          <div>
-            <input
-              type="password"
-              class="register-input"
-              id="password-again"
-              placeholder="Sifre Tekrar*"
-              required
-              onChange={(e) => setPasswordAgain(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && submit()}
-            ></input>
-          </div>
-          <button
-            class="register-btn"
-            type="submit"
-            onClick={submit}
-            disabled={loading}
-          >
-            {loading ? "Yükleniyor..." : "Kayıt Ol"}
-          </button>
-        </div>
-        <div>
-          <label>
-            <small>
-              Zaten bir hesabın var mı?{" "}
-              <Link to="/login">Giriş Yap</Link>
-              <style>
-                @import
-                url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-              </style>
-            </small>
-          </label>
-        </div>
+        <Formik
+          initialValues={initialValues}
+          onSubmit={(initialValues) => {
+            console.log(initialValues);
+            submit();
+          }}
+          validationSchema={validationSchema}
+        >
+          <Form>
+            <div class="d-flex align-items-center justify-content-center">
+              <img
+                className="register-img"
+                src="https://tobeto.com/_next/static/media/tobeto-logo.29b55e1c.svg"
+              />
+            </div>
+            <div>
+              <h1>Hemen Kayıt Ol</h1>
+            </div>
+            <div className="register-events">
+              <FormikInput
+                name="name"
+                className="register-input"
+                placeholder="Ad"
+              />
+              <FormikInput
+                name="lastname"
+                className="register-input"
+                placeholder="Soyad"
+              />
+              <FormikInput
+                name="email"
+                className="register-input"
+                placeholder="E-Mail"
+              />
+              <FormikInput
+                name="password"
+                type="password"
+                className="register-input"
+                placeholder="Şifre"
+              />
+              <FormikInput
+                name="retypePassword"
+                type="password"
+                className="register-input"
+                placeholder="Şifre Tekrar"
+                submit={submit}
+              />
+              <button
+                class="register-btn"
+                type="submit"
+                onClick={submit}
+                disabled={loading}
+              >
+                {loading ? "Yükleniyor..." : "Kayıt Ol"}
+              </button>
+            </div>
+            <div className="d-flex align-items-center justify-content-center mt-2">
+              <small>
+                Zaten bir hesabın var mı? <Link to="/login">Giriş Yap</Link>
+              </small>
+            </div>
+          </Form>
+        </Formik>
       </div>
       <ToastContainer position="bottom-right" theme="light"></ToastContainer>
     </div>
