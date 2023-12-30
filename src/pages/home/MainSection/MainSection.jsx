@@ -8,6 +8,8 @@ import AppealService from "../../../services/AppealService";
 import AnnouncementService from "../../../services/AnnouncementService";
 import ExamService from "../../../services/ExamService";
 import SurveyService from "../../../services/SurveyService";
+import Appeal from "../../../components/Appeal/appeal";
+import Exam from "../../../components/Exams/exam";
 
 function MainSection() {
   const [exams, setExams] = useState([]);
@@ -18,7 +20,7 @@ function MainSection() {
   const [section, setSection] = useState(0);
 
   useEffect(() => {
-    getLectures();
+    //getLectures();
     //getAppeals();
     //getAnnouncements();
     //getExams();
@@ -129,7 +131,7 @@ function MainSection() {
                 <button
                   className="nav-link "
                   onClick={() => {
-                    setSection(3);
+                    setSection(4);
                   }}
                 >
                   Sınavlarım
@@ -141,37 +143,53 @@ function MainSection() {
             <div className="tab-content">
               {section == 0 && (
                 <div class="tab-pane fade show active">
-                  <div className="row">
+                  <div className="row ">
+                  <Appeal/> 
+                  <Appeal/> 
+                  <Appeal/>
+                   <Appeal/> 
                     {appeals.map((appeal) => (
-                      <></> //APPEAL
+                      <Appeal/> //APPEAL
                     ))}
                   </div>
                   <a class="showMoreBtn">
-                    Daha Fazla Göster <Link to="/basvurularim"></Link>
+                    Daha Fazla Göster <Link to="/basvurularim"/>
                   </a>
                 </div>
               )}
               {section == 1 && (
                 <div class="tab-pane fade show active">
                   <div className="grid-container">
+                    <Lecture></Lecture>
+                    <Lecture></Lecture>
+                    <Lecture></Lecture>
+                    <Lecture></Lecture>
+                    <Lecture></Lecture>
+                    <Lecture></Lecture>
+                    <Lecture></Lecture>
                     {lectures.map((lecture) => {
-                      return <Lecture lecture={lecture}></Lecture>;
+                      return <Lecture lecture={lecture}/>;
                     })}
                   </div>
                   <a class="showMoreBtn">
-                    Daha Fazla Göster <Link to="/egitimlerim"></Link>
+                    Daha Fazla Göster <Link to="/egitimlerim"/>
                   </a>
                 </div>
               )}
               {section == 2 && (
                 <div class="tab-pane fade show active">
                   <div className="row">
+                    <Announcement></Announcement>
+                    <Announcement></Announcement>
+                    <Announcement></Announcement>
+                    <Announcement></Announcement>
+                    <Announcement></Announcement>
                     {announcements.map((announcement) => (
-                      <Announcement announcement={announcement}></Announcement>
+                      <Announcement announcement={announcement}/>
                     ))}
                   </div>
                   <a class="showMoreBtn">
-                    Daha Fazla Göster <Link to="/duyurular"></Link>
+                    Daha Fazla Göster <Link to="/duyurular"/>
                   </a>
                 </div>
               )}
@@ -179,7 +197,22 @@ function MainSection() {
                 <div class="tab-pane fade show active">
                   <div className="row"></div>
                   <a class="showMoreBtn">
-                    Daha Fazla Göster <Link to="/anketler"></Link>
+                    Daha Fazla Göster <Link to="/anketler"/>
+                  </a>
+                </div>
+              )}
+              {section == 4 && (
+                <div class="tab-pane fade show active">
+                  <div className="row">
+                    <Exam/>
+                    <Exam/>
+                    <Exam/>
+                    <Exam/>
+                    <Exam/>
+                    <Exam/>
+                  </div>
+                  <a class="showMoreBtn">
+                    Daha Fazla Göster <Link to="/sinavlar"/>
                   </a>
                 </div>
               )}
