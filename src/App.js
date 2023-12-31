@@ -12,6 +12,8 @@ import Exam from './components/Exams/exam';
 
 function App() {
   return (
+    <div class="snow_wrap">
+        <div class="snow"></div>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={ <Home/> } ></Route>
@@ -21,6 +23,7 @@ function App() {
         <Route path='/exam' element={ <Exam/> }></Route>
       </Routes>
     </BrowserRouter>
+    </div>
   );
 }
 
