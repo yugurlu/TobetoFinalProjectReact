@@ -8,7 +8,6 @@ export const Home = () => {
   var userInfo = JSON.parse(localStorage.getItem("user"));
   return (
     <div>
-        <Navbar />
         <div className="welcome-message container text-center">
           <h3 className="spans-elements">
             <span className="tobete-text-secondary">TOBETO</span>

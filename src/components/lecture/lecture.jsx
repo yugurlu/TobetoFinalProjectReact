@@ -7,12 +7,12 @@ export const Lecture = (props) => {
       <div class="edu-card">
         <img
           class="card-imgg"
-          src=""
+          src={props.lecture.lectureImageUrl}
         ></img>
         <div class="card-content">
           <div class="d-flex flex-column">
-            <span></span>
-            <span class="platform-course-date"></span>
+            <span>{props.lecture.lectureName}</span>
+            <span class="platform-course-date">{props.lecture.startDate}</span>
           </div>
           <a class="apply-btn">Eğitime Git</a>
         </div>

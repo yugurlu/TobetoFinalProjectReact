@@ -3,7 +3,7 @@ import "./MainSection.css";
 import LectureService from "../../../services/LectureService";
 import { Lecture } from "../../../components/lecture/lecture";
 import Announcement from "../../../components/Announcements/Announcement";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AppealService from "../../../services/AppealService";
 import AnnouncementService from "../../../services/AnnouncementService";
 import ExamService from "../../../services/ExamService";
@@ -12,6 +12,7 @@ import Appeal from "../../../components/Appeal/appeal";
 import Exam from "../../../components/Exams/exam";
 
 function MainSection() {
+  const navigate = useNavigate();
   const [exams, setExams] = useState([]);
   const [announcements, setAnnouncements] = useState([]);
   const [appeals, setAppeals] = useState([]);
@@ -20,7 +21,7 @@ function MainSection() {
   const [section, setSection] = useState(0);
 
   useEffect(() => {
-    //getLectures();
+    getLectures();
     //getAppeals();
     //getAnnouncements();
     //getExams();
@@ -144,35 +145,36 @@ function MainSection() {
               {section == 0 && (
                 <div class="tab-pane fade show active">
                   <div className="row ">
-                  <Appeal/> 
-                  <Appeal/> 
-                  <Appeal/>
-                   <Appeal/> 
+                    <Appeal />
+                    <Appeal />
                     {appeals.map((appeal) => (
-                      <Appeal/> //APPEAL
+                      <Appeal />
                     ))}
                   </div>
-                  <a class="showMoreBtn">
-                    Daha Fazla Göster <Link to="/basvurularim"/>
+                  <a
+                    class="showMoreBtn"
+                    onClick={() => {
+                      navigate("/basvurularim", { state: appeals });
+                    }}
+                  >
+                    Daha Fazla Göster
                   </a>
                 </div>
               )}
               {section == 1 && (
                 <div class="tab-pane fade show active">
                   <div className="grid-container">
-                    <Lecture></Lecture>
-                    <Lecture></Lecture>
-                    <Lecture></Lecture>
-                    <Lecture></Lecture>
-                    <Lecture></Lecture>
-                    <Lecture></Lecture>
-                    <Lecture></Lecture>
                     {lectures.map((lecture) => {
-                      return <Lecture lecture={lecture}/>;
+                      return <Lecture lecture={lecture} />;
                     })}
                   </div>
-                  <a class="showMoreBtn">
-                    Daha Fazla Göster <Link to="/egitimlerim"/>
+                  <a
+                    class="showMoreBtn"
+                    onClick={() => {
+                      navigate("/egitimlerim", { state: lectures });
+                    }}
+                  >
+                    Daha Fazla Göster
                   </a>
                 </div>
               )}
@@ -182,44 +184,53 @@ function MainSection() {
                     <Announcement></Announcement>
                     <Announcement></Announcement>
                     <Announcement></Announcement>
-                    <Announcement></Announcement>
-                    <Announcement></Announcement>
                     {announcements.map((announcement) => (
-                      <Announcement announcement={announcement}/>
+                      <Announcement announcement={announcement} />
                     ))}
                   </div>
-                  <a class="showMoreBtn">
-                    Daha Fazla Göster <Link to="/duyurular"/>
+                  <a
+                    class="showMoreBtn"
+                    onClick={() => {
+                      navigate("/duyurularim", { state: announcements });
+                    }}
+                  >
+                    Daha Fazla Göster
                   </a>
                 </div>
               )}
               {section == 3 && (
                 <div class="tab-pane fade show active">
                   <div className="row"></div>
-                  <a class="showMoreBtn">
-                    Daha Fazla Göster <Link to="/anketler"/>
+                  <a
+                    class="showMoreBtn"
+                    onClick={() => {
+                      navigate("/duyurularim", { state: announcements });
+                    }}
+                  >
+                    Daha Fazla Göster
                   </a>
                 </div>
               )}
               {section == 4 && (
                 <div class="tab-pane fade show active">
                   <div className="row">
-                    <Exam/>
-                    <Exam/>
-                    <Exam/>
-                    <Exam/>
-                    <Exam/>
-                    <Exam/>
+                    <Exam />
+                    <Exam />
                   </div>
-                  <a class="showMoreBtn">
-                    Daha Fazla Göster <Link to="/sinavlar"/>
+                  <a
+                    class="showMoreBtn"
+                    onClick={() => {
+                      navigate("/sinavlarim", { state: exams });
+                    }}
+                  >
+                    Daha Fazla Göster
                   </a>
                 </div>
               )}
             </div>
           </div>
         </div>
-        </div>
+      </div>
     </section>
   );
 }

@@ -51,23 +51,11 @@ export const Navbar = () => {
             <div className="mx-3 align-items-center d-flex align-items-center">
               <span className="tbt-gradient"></span>
             </div>
-            <div className="btn-group header-avatar">
-              <button
-                type="button"
-                className="btn p-0 fw-normal b-r-35 text-end d-flex align-items-center show"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <div className="me-2">
+            <div className="header-avatar ">
+                <div className="me-2 d-flex align-items-center justify-content-center">
                   <span>
-                    <span>
-                      <img
-                        className="cv-pp-img rounded-circle"
-                        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg'%20version='1.1'%20width='36'%20height='36'/>"
-                      />
-                    </span>
                     <img
-                      src={ProfileLogo}
+                      src="https://pbs.twimg.com/profile_images/1697250796906348546/JAYDV2ix_400x400.jpg"
                       className="cv-pp-img rounded-circle"
                     />
                   </span>
@@ -95,7 +83,7 @@ export const Navbar = () => {
                     </Dropdown.Menu>
                   </Dropdown>
                 </span>
-              </button>
+             
             </div>
           </div>
         </div>

@@ -21,27 +21,27 @@ export const Login = () => {
     password: string().required("Doldurulması zorunlu alan*"),
   });
 
-  const submit = async () => {
-    //setLoading(true);
-    //var request = new Request({});
-    //await request.axios_request
-    //  .post("/Auth/Login", { email: email, password: password })
-    //  .then((response) => {
-    //    localStorage.setItem(
-    //      "user",
-    //      JSON.stringify({
-    //        name: response.data.userFirstName,
-    //        lastName: response.data.userLastName,
-    //        id: response.data.studentId,
-    //      })
-    //    );
-    //    navigate("/");
-    //  })
-    //  .catch(() => {
-    //    toast("Yanlış E-mail veya Şifre Lütfen Tekrar Deneyiniz!");
-    //  })
-    //  .finally(() => setLoading(false));
-  };
+  const submit = async (initialValues) => {
+    setLoading(true);
+    var request = new Request({});
+    await request.axios_request
+      .post("/Auth/Login", { email: initialValues.email, password: initialValues.password })
+      .then((response) => {
+        localStorage.setItem(
+          "user",
+          JSON.stringify({
+            name: response.data.userFirstName,
+            lastName: response.data.userLastName,
+            id: response.data.studentId,
+          })
+        );
+        navigate("/");
+      })
+      .catch((error) => {
+        toast("Yanlış E-mail veya Şifre Lütfen Tekrar Deneyiniz!");
+      })
+      .finally(() => setLoading(false));
+  }
 
   return (
     <div className="login-base">
@@ -49,8 +49,7 @@ export const Login = () => {
         <Formik
           initialValues={initialValues}
           onSubmit={(initialValues) => {
-            console.log(initialValues);
-            //submit(initialValues)
+            submit(initialValues)
           }}
           validationSchema={validationSchema}
         >
