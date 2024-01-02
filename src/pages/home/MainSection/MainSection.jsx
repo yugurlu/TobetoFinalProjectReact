@@ -13,53 +13,27 @@ import Exam from "../../../components/Exams/exam";
 
 function MainSection() {
   const navigate = useNavigate();
-  const [exams, setExams] = useState([]);
-  const [announcements, setAnnouncements] = useState([]);
-  const [appeals, setAppeals] = useState([]);
-  const [lectures, setLectures] = useState([]);
-  const [surveys, setSurveys] = useState([]);
+  const [data, setData] = useState({
+    exams: [],
+    announcements: [],
+    appeals: [],
+    lectures: [],
+    surveys: [],
+  });
+
   const [section, setSection] = useState(0);
 
   useEffect(() => {
-    getLectures();
-    //getAppeals();
-    //getAnnouncements();
-    //getExams();
-    //getSurveys();
+    axiosData("lectures", LectureService.getAll);
+    // axiosData("appeals", AppealService.getAll);
+    // axiosData("announcements", AnnouncementService.getAll);
+    // axiosData("exams", ExamService.getAll);
+    // axiosData("surveys", SurveyService.getAll);
   }, []);
 
-  const getLectures = async () => {
-    await LectureService.getAll().then((response) => {
-      setLectures(response.data.items);
-      console.log(response.data.items);
-    });
-  };
-
-  const getAppeals = async () => {
-    await AppealService.getAll().then((response) => {
-      setAppeals(response.data.items);
-      console.log(response.data.items);
-    });
-  };
-
-  const getAnnouncements = async () => {
-    await AnnouncementService.getAll().then((response) => {
-      setAnnouncements(response.data.items);
-      console.log(response.data.items);
-    });
-  };
-
-  const getExams = async () => {
-    await ExamService.getAll().then((response) => {
-      setExams(response.data.items);
-      console.log(response.data.items);
-    });
-  };
-
-  const getSurveys = async () => {
-    await SurveyService.getAll().then((response) => {
-      setSurveys(response.data.items);
-      console.log(response.data.items);
+  const axiosData = async (key, service) => {
+    await service().then((response) => {
+      setData((prevData) => ({ ...prevData, [key]: response.data.items }));
     });
   };
 
@@ -147,14 +121,14 @@ function MainSection() {
                   <div className="row ">
                     <Appeal />
                     <Appeal />
-                    {appeals.map((appeal) => (
+                    {data.appeals.map((appeal) => (
                       <Appeal />
                     ))}
                   </div>
                   <a
                     class="showMoreBtn"
                     onClick={() => {
-                      navigate("/basvurularim", { state: appeals });
+                      navigate("/basvurularim", { state: data.appeals });
                     }}
                   >
                     Daha Fazla Göster
@@ -164,14 +138,14 @@ function MainSection() {
               {section == 1 && (
                 <div class="tab-pane fade show active">
                   <div className="grid-container">
-                    {lectures.map((lecture) => {
+                    {data.lectures.map((lecture) => {
                       return <Lecture lecture={lecture} />;
                     })}
                   </div>
                   <a
                     class="showMoreBtn"
                     onClick={() => {
-                      navigate("/egitimlerim", { state: lectures });
+                      navigate("/egitimlerim", { state: data.lectures });
                     }}
                   >
                     Daha Fazla Göster
@@ -184,14 +158,14 @@ function MainSection() {
                     <Announcement></Announcement>
                     <Announcement></Announcement>
                     <Announcement></Announcement>
-                    {announcements.map((announcement) => (
+                    {data.announcements.map((announcement) => (
                       <Announcement announcement={announcement} />
                     ))}
                   </div>
                   <a
                     class="showMoreBtn"
                     onClick={() => {
-                      navigate("/duyurularim", { state: announcements });
+                      navigate("/duyurularim", { state: data.announcements });
                     }}
                   >
                     Daha Fazla Göster
@@ -204,7 +178,7 @@ function MainSection() {
                   <a
                     class="showMoreBtn"
                     onClick={() => {
-                      navigate("/duyurularim", { state: announcements });
+                      navigate("/anketlerim", { state: data.surveys });
                     }}
                   >
                     Daha Fazla Göster
@@ -220,7 +194,7 @@ function MainSection() {
                   <a
                     class="showMoreBtn"
                     onClick={() => {
-                      navigate("/sinavlarim", { state: exams });
+                      navigate("/sinavlarim", { state: data.exams });
                     }}
                   >
                     Daha Fazla Göster
