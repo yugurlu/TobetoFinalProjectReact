@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { object, string } from "yup";
+import FormikInput from "../../components/FormikInput/FormikInput";
 
 export const Login = () => {
   const navigate = useNavigate();
@@ -21,11 +22,14 @@ export const Login = () => {
     password: string().required("Doldurulması zorunlu alan*"),
   });
 
-  const submit = async (initialValues) => {
+  async function submit(initialValues) {
     setLoading(true);
     var request = new Request({});
     await request.axios_request
-      .post("/Auth/Login", { email: initialValues.email, password: initialValues.password })
+      .post("/Auth/Login", {
+        email: initialValues.email,
+        password: initialValues.password,
+      })
       .then((response) => {
         localStorage.setItem(
           "user",
@@ -41,7 +45,7 @@ export const Login = () => {
         toast("Yanlış E-mail veya Şifre Lütfen Tekrar Deneyiniz!");
       })
       .finally(() => setLoading(false));
-  }
+  };
 
   return (
     <div className="login-base">
@@ -61,28 +65,17 @@ export const Login = () => {
               />
             </div>
             <div className="login-events">
-              <div>
-                <Field
-                  name="email"
-                  className="login-input"
-                  placeholder="E-posta"
-                />
-                <ErrorMessage name="email">
-                  {(message) => <span className="text-danger">{message}</span>}
-                </ErrorMessage>
-              </div>
-              <div>
-                <Field
-                  name="password"
-                  type="password"
-                  className="login-input"
-                  placeholder="Şifre"
-                  onKeyDown={(e) => e.key === "Enter" && submit()}
-                />
-                <ErrorMessage name="password">
-                  {(message) => <span className="text-danger">{message}</span>}
-                </ErrorMessage>
-              </div>
+              <FormikInput
+                name="email"
+                className="login-input"
+                placeholder="E-Mail"
+              />
+              <FormikInput
+                name="password"
+                type="password"
+                className="login-input"
+                placeholder="Şifre"
+              />
               <button class="login-btn" type="submit" disabled={loading}>
                 {loading ? "Yükleniyor..." : "Giriş Yap"}
               </button>

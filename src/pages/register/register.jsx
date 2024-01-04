@@ -109,7 +109,6 @@ export const Register = () => {
                 type="password"
                 className="register-input"
                 placeholder="Şifre Tekrar"
-                submit={submit}
               />
               <button
                 class="register-btn"

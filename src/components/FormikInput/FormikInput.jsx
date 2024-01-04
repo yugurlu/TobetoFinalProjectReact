@@ -9,7 +9,6 @@ const FormikInput = (props) => {
         type={props.type || "text"}
         className={props.className}
         placeholder={props.placeholder}
-        onKeyDown={(e) => e.key === "Enter" && props.submit() | ""}
       />
       <ErrorMessage name={props.name}>
         {(message) => <span className="text-danger">{message}</span>}

@@ -13,6 +13,7 @@ import Exam from "../../../components/Exams/exam";
 
 function MainSection() {
   const navigate = useNavigate();
+
   const [data, setData] = useState({
     exams: [],
     announcements: [],
