@@ -62,7 +62,7 @@ function LectureInfo() {
           <text>65 Video</text>
         </div>
       </div>
-      <div className="infor-section">
+      <div className="info-section">
         <div className="d-flex justify-content-between">
           <div>
             <img src={bagIcon}></img>
