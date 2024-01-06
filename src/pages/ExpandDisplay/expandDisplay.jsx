@@ -5,6 +5,7 @@ import { Lecture } from "../../components/lecture/lecture";
 import Appeal from "../../components/Appeal/appeal";
 import { Announcement } from "@mui/icons-material";
 import Exam from "../../components/Exams/exam";
+import { Navbar } from "../../layouts/Navbar/navbar";
 
 function ExpandDisplay() {
   const location = useLocation();
@@ -19,6 +20,7 @@ function ExpandDisplay() {
 
   return (
     <main>
+      <Navbar/>
       <div className="container-fluid">
         <div class="page-banner-card">
           <div class="container">
@@ -33,10 +35,6 @@ function ExpandDisplay() {
       </div>
       <div className="container expandDisplay-container">
         <div className="items">
-          <Lecture lecture={items[0]}></Lecture>
-          <Lecture lecture={items[0]}></Lecture>
-          <Lecture lecture={items[0]}></Lecture>
-          <Lecture lecture={items[0]}></Lecture>
           {items
             ? items.map((item) => {
                 return componentsSelector(item);

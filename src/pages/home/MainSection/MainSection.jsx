@@ -63,7 +63,7 @@ function MainSection() {
           </div>
           <div className="col-12 mb-4">
             <ul className="nav nav-tabs mainTablist" role="tablist">
-              <li className="nav-item" role="presentation">
+              <li className="nav-item">
                 <button
                   className="nav-link"
                   onClick={() => {
@@ -73,7 +73,7 @@ function MainSection() {
                   Başvurularım
                 </button>
               </li>
-              <li className="nav-item" role="presentation">
+              <li className="nav-item">
                 <button
                   className="nav-link"
                   onClick={() => {
@@ -83,7 +83,7 @@ function MainSection() {
                   Eğitimlerim
                 </button>
               </li>
-              <li className="nav-item" role="presentation">
+              <li className="nav-item">
                 <button
                   className="nav-link"
                   onClick={() => {
@@ -93,7 +93,7 @@ function MainSection() {
                   Duyuru ve Haberlerim
                 </button>
               </li>
-              <li className="nav-item" role="presentation">
+              <li className="nav-item">
                 <button
                   className="nav-link "
                   onClick={() => {
@@ -103,7 +103,7 @@ function MainSection() {
                   Anketlerim
                 </button>
               </li>
-              <li className="nav-item" role="presentation">
+              <li className="nav-item">
                 <button
                   className="nav-link "
                   onClick={() => {

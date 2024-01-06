@@ -33,32 +33,32 @@ export const Register = () => {
       .oneOf([ref("password")], "Şifreler Eslesmiyor"),
   });
 
-  const submit = async () => {
-    //setLoading(true);
-    //var request = new Request({});
-    //if (passwordControl()) {
-    //    await request.axios_request
-    //      .post("/Students", {
-    //        firstName: name,
-    //        lastName: lastname,
-    //        email: email,
-    //        password: password,
-    //      })
-    //      .then((response) => {
-    //        localStorage.setItem("user",
-    //          JSON.stringify({
-    //            name: response.data.userFirstName,
-    //            lastName: response.data.userLastName,
-    //            id: response.data.studentId,
-    //          })
-    //        );
-    //        navigate("/");
-    //      })
-    //      .catch((error) => {
-    //        toast("Bu Maile Ait Bir Kullanici Zaten Var");
-    //      })
-    //      .finally(() => setLoading(false));
-    //  }
+  const submit = async (initialValues) => {
+    console.log(initialValues)
+    setLoading(true);
+    var request = new Request({});
+    await request.axios_request
+      .post("/Students", {
+        firstName: initialValues.name,
+        lastName: initialValues.lastname,
+        email: initialValues.email,
+        password: initialValues.password,
+      })
+      .then((response) => {
+        localStorage.setItem(
+          "user",
+          JSON.stringify({
+            name: response.data.userFirstName,
+            lastName: response.data.userLastName,
+            id: response.data.studentId,
+          })
+        );
+        navigate("/");
+      })
+      .catch((error) => {
+        toast("Bu Maile Ait Bir Kullanici Zaten Var");
+      })
+      .finally(() => setLoading(false));
   };
 
   return (
@@ -68,7 +68,7 @@ export const Register = () => {
           initialValues={initialValues}
           onSubmit={(initialValues) => {
             console.log(initialValues);
-            submit();
+            submit(initialValues);
           }}
           validationSchema={validationSchema}
         >
