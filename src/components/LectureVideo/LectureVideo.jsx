@@ -17,20 +17,17 @@ function LectureVideo() {
         />
       </div>
       <div className="lecture-video-detail d-flex align-items-center">
-        <div className="col-lg-9 col-md-8 col-sm-9 col-xs-12">
+        <div
+          className="col-lg-9 col-md-8 col-sm-9 col-xs-12"
+          style={{ flex: "1" }}
+        >
           <div className="video-title">
             <strong>Sorularla Sorgu Çalışmaları - 3</strong>
           </div>
           <div className="d-flex justify-content-between">
-            <div>
-              <text style={{ color: "grey" }}>Video - 10 dk</text>
-            </div>
-            <div>
-              <text>1.4 Puan</text>
-            </div>
-            <div>
-              <span>Devam ediyor</span>
-            </div>
+            <text style={{ color: "grey" }}>Video - 10 dk</text>
+            <text>1.4 Puan</text>
+            <span>Devam ediyor</span>
           </div>
         </div>
         <div>

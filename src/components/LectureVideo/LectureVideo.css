@@ -3,17 +3,36 @@
   border-top-right-radius: 25px;
 }
 
-.lecture-video-detail 
-{
-    padding: 20px;
-    width: 100%;
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    box-shadow: 5px 0px 5px 5px rgb(223, 223, 223);
+.lecture-video-detail {
+  gap: 50px;
+  padding: 20px;
+  width: 100%;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  box-shadow: 5px 0px 5px 5px rgb(223, 223, 223);
 }
 
-
-.video-title
-{
+.video-title {
   padding-bottom: 4%;
+}
+
+.detail-button {
+  border-width: 1px;
+  background-color: white;
+  border-radius: 10px;
+  border-color: #9933ff;
+  color: #9933ff;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  scale: 1;
+  transition: 0.5s;
+}
+
+.detail-button:hover {
+  color: white;
+  background-color: #9933ff;
+  scale: 1.05;
+  transition: 0.5s;
 }

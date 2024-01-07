@@ -23,15 +23,3 @@
 .lecture-video-header {
   animation: fadeIn 0.6s ease-in-out;
 }
-
-.detail-button {
-  border-width: 1px;
-  background-color: white;
-  border-radius: 10px;
-  border-color: #9933ff;
-  color: #9933ff;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
-}
