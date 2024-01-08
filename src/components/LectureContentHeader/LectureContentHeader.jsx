@@ -27,9 +27,6 @@ function LectureContentHeader() {
           <LectureVideoHeader />
           <LectureVideoHeader />
           <LectureVideoHeader />
-          <LectureVideoHeader />
-          <LectureVideoHeader />
-          <LectureVideoHeader />
         </>
       )}
     </div>

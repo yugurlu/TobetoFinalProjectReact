@@ -1,15 +1,17 @@
-.lecture-video {
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+.video-player {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
 }
 
 .lecture-video-detail {
   gap: 50px;
   padding: 20px;
   width: 100%;
-  border-bottom-right-radius: 25px;
-  border-bottom-left-radius: 25px;
-  box-shadow: 5px 0px 5px 5px rgb(223, 223, 223);
+  height: 85px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: 5px 5px 10px rgb(223, 223, 223);
 }
 
 .video-title {

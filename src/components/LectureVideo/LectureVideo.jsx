@@ -1,20 +1,12 @@
+import VideoPlayer from "../VideoPLayer/VideoPlayer";
 import "./LectureVideo.css";
 import ReactPlayer from "react-player";
 
 function LectureVideo() {
   return (
     <div className="lecture-video align-content-center">
-      <div
-        style={{
-          borderTopLeftRadius: "30px",
-          borderTopRightRadius: "30px",
-          overflow: "hidden",
-        }}
-      >
-        <ReactPlayer
-          url="https://www.youtube.com/watch?v=19Fp-qLvJuA"
-          width="100%"
-        />
+      <div className="video-player">
+        <VideoPlayer />
       </div>
       <div className="lecture-video-detail d-flex align-items-center">
         <div
