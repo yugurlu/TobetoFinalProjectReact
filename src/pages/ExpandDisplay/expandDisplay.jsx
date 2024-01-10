@@ -1,7 +1,7 @@
 import React from "react";
 import "./expandDisplay.css";
 import { useLocation } from "react-router-dom";
-import { Lecture } from "../../components/lecture/lecture";
+import { Lecture } from "../../components/Lecture/lecture";
 import Appeal from "../../components/Appeal/appeal";
 import { Announcement } from "@mui/icons-material";
 import Exam from "../../components/Exams/exam";

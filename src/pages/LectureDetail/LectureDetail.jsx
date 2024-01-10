@@ -17,7 +17,7 @@ function LectureDetail() {
       <div class="lecture-detail container">
         <div class="lecture-activity">
           <div class="row">
-            <div class="col-lg-1 col-sm-2 mt-2 col-1Z2">
+            <div class="col-lg-1 col-sm-2 mt-2 col-12">
               <img
                 class="lecture-img"
                 src="https://lms.tobeto.com/tobeto/eep/common_show_picture_cached.aspx?pQS=eaAjNZ0uaOFNO7nf8wuXoA%3d%3d"
@@ -36,7 +36,7 @@ function LectureDetail() {
                 <div className="actions d-flex">
                   <div className="like-actions ">
                     <div
-                      className={`like ${liked && "liked"}`}
+                      className="like"
                       onClick={() => setLiked(!liked)}
                     >
                       <img src={liked === false ? unlikeSvg : likeSvg}></img>
@@ -44,7 +44,7 @@ function LectureDetail() {
                   </div>
                   <div className="save-actions">
                     <div
-                      className={`save ${saved && "saved"}`}
+                      className="save"
                       onClick={() => setSaved(!saved)}
                     >
                       <img src={saved === false ? unsaveSvg : saveSvg}></img>

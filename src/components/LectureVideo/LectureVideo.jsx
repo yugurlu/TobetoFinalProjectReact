@@ -1,8 +1,10 @@
-import VideoPlayer from "../VideoPLayer/VideoPlayer";
+import { useState } from "react";
+import VideoPlayer from "../VideoPlayer/VideoPlayer";
 import "./LectureVideo.css";
-import ReactPlayer from "react-player";
 
 function LectureVideo() {
+  const [showDetail, setShowDetail] = useState(false);
+
   return (
     <div className="lecture-video align-content-center">
       <div className="video-player">
@@ -23,7 +25,10 @@ function LectureVideo() {
           </div>
         </div>
         <div>
-          <button className="detail-button">
+          <button
+            className="detail-button"
+            onClick={() => setShowDetail(!showDetail)}
+          >
             <strong>DETAY</strong>
           </button>
         </div>

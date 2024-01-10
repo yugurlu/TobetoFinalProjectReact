@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./MainSection.css";
 import LectureService from "../../../services/LectureService";
-import { Lecture } from "../../../components/lecture/lecture";
+import { Lecture } from "../../../components/Lecture/lecture";
 import Announcement from "../../../components/Announcements/Announcement";
 import { Link, useNavigate } from "react-router-dom";
 import AppealService from "../../../services/AppealService";

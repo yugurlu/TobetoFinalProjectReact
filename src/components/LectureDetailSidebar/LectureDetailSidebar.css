@@ -1,0 +1,51 @@
+.lecture-detail-sidebar {
+  padding: 20px;
+}
+
+.lecture-info strong {
+  font-size: small;
+}
+
+.lecture-img {
+  width: 100%;
+  height: 100%;
+}
+
+.content-type {
+  color: white;
+  border: 6px solid #549be6;
+  border-radius: 5px;
+  background-color: #549be6;
+  font-size: small;
+}
+
+.time-img {
+  width: 20px;
+}
+
+.content-like {
+  cursor: pointer;
+}
+
+.content-detail-button {
+  color: white;
+  border-width: 1px;
+  border-radius: 10px;
+  border-color: #9933ff;
+  background-color: #9933ff;
+  height: 40px;
+  width: 120px;
+  scale: 1;
+  transition: 0.5s;
+}
+
+.content-detail-button:hover {
+  color: #9933ff;
+  background-color: white;
+  scale: 1.05;
+  transition: 0.5s;
+}
+
+.more-button {
+  cursor: pointer;
+}
