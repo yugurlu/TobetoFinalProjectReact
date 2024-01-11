@@ -3,6 +3,10 @@
   padding-bottom: 5%;
 }
 
+.blur {
+  filter: blur(2px);
+}
+
 .lecture-detail {
   box-shadow: 5px 5px 10px 10px rgb(204, 204, 204);
   border-radius: 20px;

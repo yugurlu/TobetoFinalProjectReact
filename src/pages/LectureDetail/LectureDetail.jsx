@@ -6,15 +6,17 @@ import unsaveSvg from "../../bookmark_FILL0_wght100_GRAD0_opsz24.svg";
 import saveSvg from "../../bookmark_FILL1_wght200_GRAD0_opsz24.svg";
 import LectureInfo from "../../components/LectureInfo/LectureInfo";
 import LectureContent from "../../components/LectureContent/LectureContent";
+import LectureDetailSidebar from "../../components/LectureDetailSidebar/LectureDetailSidebar";
 
 function LectureDetail() {
+  const [showDetail, setShowDetail] = useState(false);
   const [liked, setLiked] = useState(false);
   const [saved, setSaved] = useState(false);
   const [section, setSection] = useState(0);
 
   return (
     <div className="lecture">
-      <div class="lecture-detail container">
+      <div class={`lecture-detail container ${showDetail && "blur"}`}>
         <div class="lecture-activity">
           <div class="row">
             <div class="col-lg-1 col-sm-2 mt-2 col-12">
@@ -35,18 +37,12 @@ function LectureDetail() {
                 </div>
                 <div className="actions d-flex">
                   <div className="like-actions ">
-                    <div
-                      className="like"
-                      onClick={() => setLiked(!liked)}
-                    >
+                    <div className="like" onClick={() => setLiked(!liked)}>
                       <img src={liked === false ? unlikeSvg : likeSvg}></img>
                     </div>
                   </div>
                   <div className="save-actions">
-                    <div
-                      className="save"
-                      onClick={() => setSaved(!saved)}
-                    >
+                    <div className="save" onClick={() => setSaved(!saved)}>
                       <img src={saved === false ? unsaveSvg : saveSvg}></img>
                     </div>
                   </div>
@@ -71,9 +67,12 @@ function LectureDetail() {
             </ul>
           </div>
         </div>
-        {section === 0 && <LectureContent />}
+        {section === 0 && <LectureContent setShowDetail={setShowDetail} />}
         {section === 1 && <LectureInfo />}
       </div>
+      {showDetail === true && (
+        <LectureDetailSidebar setShowDetail={setShowDetail} />
+      )}
     </div>
   );
 }

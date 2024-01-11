@@ -21,7 +21,7 @@ function LectureInfo() {
           style={{ marginLeft: "28px" }}
         >
           <div>
-            <strong>Bitiş</strong>
+            <strong> Bitiş</strong>
           </div>
           <text>29 ŞUB 2024 23:59</text>
         </div>
