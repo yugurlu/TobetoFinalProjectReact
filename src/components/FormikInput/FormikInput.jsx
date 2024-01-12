@@ -10,9 +10,11 @@ const FormikInput = (props) => {
         className={props.className}
         placeholder={props.placeholder}
       />
-      <ErrorMessage name={props.name}>
-        {(message) => <span className="text-danger">{message}</span>}
-      </ErrorMessage>
+      <div>
+        <ErrorMessage name={props.name}>
+          {(message) => <span className="text-danger">{message}</span>}
+        </ErrorMessage>
+      </div>
     </div>
   );
 };

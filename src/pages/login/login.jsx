@@ -51,7 +51,7 @@ export const Login = () => {
     <div className="login-base">
       <div className="login">
         <Formik
-          initialValues={initialValues}
+          initialValues={initialValues} 
           onSubmit={(initialValues) => {
             submit(initialValues)
           }}

@@ -1,10 +1,12 @@
 import React from "react";
 import Logo from "../path/tobeto-logo.png";
 import ProfileLogo from "../path/tobeto-profile-logo.png";
-import NavbarCss from "./NavbarDesign.css";
+import "./NavbarDesign.css";
 import Dropdown from "react-bootstrap/Dropdown";
+import { useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <nav className="navbar navbar-expand-xxl py-5 bg-white">
       <div className="container-fluid">
@@ -52,38 +54,35 @@ export const Navbar = () => {
               <span className="tbt-gradient"></span>
             </div>
             <div className="header-avatar ">
-                <div className="me-2 d-flex align-items-center justify-content-center">
-                  <span>
-                    <img
-                      src="https://pbs.twimg.com/profile_images/1697250796906348546/JAYDV2ix_400x400.jpg"
-                      className="cv-pp-img rounded-circle"
-                    />
-                  </span>
-                </div>
-                <div className="me-3">
-                  <p className="mb-0 name">
-                    {JSON.parse(localStorage.getItem("user")).name}{" "}
-                    {JSON.parse(localStorage.getItem("user")).lastName}
-                  </p>
-                </div>
+              <div className="me-2 d-flex align-items-center justify-content-center">
                 <span>
-                  <Dropdown>
-                    <Dropdown.Toggle
-                      variant="Secondary"
-                      id="dropdown-basic"
-                    ></Dropdown.Toggle>
-
-                    <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1">
-                        Profil Bilgileri
-                      </Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">
-                        Oturumu Kapat
-                      </Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
+                  <img
+                    src="https://pbs.twimg.com/profile_images/1697250796906348546/JAYDV2ix_400x400.jpg"
+                    className="cv-pp-img rounded-circle"
+                  />
                 </span>
-             
+              </div>
+              <div className="me-3">
+                <p className="mb-0 name">
+                  {JSON.parse(localStorage.getItem("user")).name}{" "}
+                  {JSON.parse(localStorage.getItem("user")).lastName}
+                </p>
+              </div>
+              <span>
+                <Dropdown>
+                  <Dropdown.Toggle
+                    variant="Secondary"
+                    id="dropdown-basic"
+                  ></Dropdown.Toggle>
+
+                  <Dropdown.Menu>
+                    <Dropdown.Item onClick={() => navigate("/profilim")}>
+                      Profil Bilgileri
+                    </Dropdown.Item>
+                    <Dropdown.Item>Oturumu Kapat</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+              </span>
             </div>
           </div>
         </div>

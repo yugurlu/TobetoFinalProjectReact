@@ -1,5 +1,4 @@
 import React from "react";
-import { Navbar } from "../../layouts/Navbar/navbar";
 import "./home.css";
 import MainSection from "./MainSection/MainSection";
 import Footer from "./footer/Footer";
@@ -8,7 +7,6 @@ export const Home = () => {
   var userInfo = JSON.parse(localStorage.getItem("user"));
   return (
     <div>
-      <Navbar/>
         <div className="welcome-message container text-center">
           <h3 className="spans-elements">
             <span className="tobete-text-secondary">TOBETO</span>
