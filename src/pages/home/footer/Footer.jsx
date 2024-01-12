@@ -18,7 +18,7 @@ function Footer() {
             </a>
           </div>
           <div className="col-6 col-lg-8 my-4">
-            <ul className="list-unstyled mb-0 d-flex flex-wrap align-items-center justify-content-center justify-content-lg-end">
+            <ul className="list-unstyled mb-0 d-flex flex-wrap  justify-content-end justify-content-lg-end">
               <li className="mb-lg-0">
                 <a className="btnn btn-light-light">Bize Ulaşın</a>
               </li>

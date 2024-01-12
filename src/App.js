@@ -20,8 +20,7 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/:items" element={<ExpandDisplay />}></Route>
-        <Route path="/ders-detay" element={<LectureDetail />}></Route>
-        <Route path="/ders-bilgi" element={<LectureDetailSidebar />}></Route>
+        <Route path="/ders-detay/:name" element={<LectureDetail />}></Route>
       </Routes>
     </BrowserRouter>
   );

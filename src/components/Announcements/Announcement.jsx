@@ -11,9 +11,13 @@ function Announcement(props) {
         <div class="d-flex flex-column">
           <div class="d-flex justify-content-between mb-4">
             <span class="type">Duyuru</span>
-            <span class="corp-names type">props.announcement.AnnouncementName</span>
+            <span class="corp-names type">
+              props.announcement.AnnouncementName
+            </span>
           </div>
-          <span class="header ">props.announcement.AnnouncementDescription</span>
+          <span class="header ">
+            props.announcement.AnnouncementDescription
+          </span>
         </div>
         <div class="d-flex justify-content-between">
           <span class="date">props.date</span>

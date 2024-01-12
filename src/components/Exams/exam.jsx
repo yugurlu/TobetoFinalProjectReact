@@ -3,7 +3,7 @@ import "./exam.css";
 
 const Exam = () => {
   return (
-    <div className="col-md-5 mb-4 ms-5 d-flex exam-card">
+    <div className="col-md-5 d-flex exam-card">
       <div className="exam-content">
         <span className="exam-name">
           Herkes için Kodlama 2C Değerlendirme Sınavı

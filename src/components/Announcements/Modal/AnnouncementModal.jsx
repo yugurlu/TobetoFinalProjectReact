@@ -1,7 +1,6 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
 
-
 function AnnouncementModal(props) {
   return (
     <Modal

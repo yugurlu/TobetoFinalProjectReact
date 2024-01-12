@@ -6,7 +6,7 @@ import { green } from "@mui/material/colors";
 
 const Appeal = () => {
   return (
-    <div className="col-md-5 mb-4 ms-5 d-flex appeal-card ">
+    <div className="col-md-5 mb-4 d-flex appeal-card">
       <div>
         <div className="appeal-name">Istanbul Kodluyor</div>
         <span className="appeal-name">Bilgilendirme</span>

@@ -25,7 +25,7 @@ function MainSection() {
   const [section, setSection] = useState(0);
 
   useEffect(() => {
-    axiosData("lectures", LectureService.getAll);
+    // axiosData("lectures", LectureService.getAll);
     // axiosData("appeals", AppealService.getAll);
     // axiosData("announcements", AnnouncementService.getAll);
     // axiosData("exams", ExamService.getAll);
@@ -119,7 +119,7 @@ function MainSection() {
             <div className="tab-content">
               {section == 0 && (
                 <div class="tab-pane fade show active">
-                  <div className="row ">
+                  <div className="row justify-content-center gap-5">
                     <Appeal />
                     <Appeal />
                     {data.appeals.map((appeal) => (
@@ -139,6 +139,10 @@ function MainSection() {
               {section == 1 && (
                 <div class="tab-pane fade show active">
                   <div className="grid-container">
+                    <Lecture></Lecture>
+                    <Lecture></Lecture>
+                    <Lecture></Lecture>
+                    <Lecture></Lecture>
                     {data.lectures.map((lecture) => {
                       return <Lecture lecture={lecture} />;
                     })}
@@ -175,7 +179,7 @@ function MainSection() {
               )}
               {section == 3 && (
                 <div class="tab-pane fade show active">
-                  <div className="row"></div>
+                  <div className="row justify-content-center gap-5"></div>
                   <a
                     class="showMoreBtn"
                     onClick={() => {
@@ -188,7 +192,7 @@ function MainSection() {
               )}
               {section == 4 && (
                 <div class="tab-pane fade show active">
-                  <div className="row">
+                  <div className="row justify-content-center gap-5">
                     <Exam />
                     <Exam />
                   </div>
