@@ -1,7 +1,7 @@
 import "./Profile.css";
-import profileSvg from "../../person_FILL0_wght300_GRAD0_opsz24.svg";
-import bagSvg from "../../work_FILL0_wght300_GRAD0_opsz24.svg";
-import eduSvg from "../../school_FILL0_wght300_GRAD0_opsz24.svg";
+import eduSvg from "../../icons/school_FILL0.svg";
+import bagSvg from "../../icons/work_FILL0_wght300.svg";
+import profileSvg from "../../icons/person_FILL0.svg";
 
 function Profile() {
   return (

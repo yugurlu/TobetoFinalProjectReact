@@ -1,7 +1,6 @@
 import { useState } from "react";
 import VideoPlayer from "../VideoPlayer/VideoPlayer";
 import "./LectureVideo.css";
-import LectureDetailSidebar from "../LectureDetailSidebar/LectureDetailSidebar";
 
 function LectureVideo({ setShowDetail }) {
   return (
@@ -24,10 +23,7 @@ function LectureVideo({ setShowDetail }) {
           </div>
         </div>
         <div>
-          <button
-            className="detail-button"
-            onClick={() => setShowDetail(true)}
-          >
+          <button className="detail-button" onClick={() => setShowDetail(true)}>
             <strong>DETAY</strong>
           </button>
         </div>

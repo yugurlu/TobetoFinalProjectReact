@@ -1,9 +1,9 @@
 import "./LectureInfo.css";
-import calenderIcon from "../../event_note_FILL0_wght100_GRAD0_opsz24.svg";
-import timerIcon from "../../timer_FILL0_wght100_GRAD0_opsz24.svg";
-import categoryIcon from "../../sell_FILL0_wght100_GRAD0_opsz40.svg";
-import docIcon from "../../description_FILL0_wght100_GRAD0_opsz40.svg";
-import bagIcon from "../../work_FILL0_wght100_GRAD0_opsz24.svg";
+import calenderIcon from "../../icons/event_note_FILL0.svg";
+import timerIcon from "../../icons/timer_FILL0_wght100.svg";
+import categoryIcon from "../../icons/sell_FILL0.svg";
+import docIcon from "../../icons/description_FILL0.svg";
+import bagIcon from "../../icons/work_FILL0_wght100.svg";
 
 function LectureInfo() {
   return (

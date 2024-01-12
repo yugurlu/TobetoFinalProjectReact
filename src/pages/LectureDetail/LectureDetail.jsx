@@ -1,12 +1,12 @@
-import React, { useState } from "react";
 import "./LectureDetail.css";
-import unlikeSvg from "../../favorite_FILL0_wght100_GRAD0_opsz24.svg";
-import likeSvg from "../../favorite_FILL1_wght400_GRAD0_opsz24.svg";
-import unsaveSvg from "../../bookmark_FILL0_wght100_GRAD0_opsz24.svg";
-import saveSvg from "../../bookmark_FILL1_wght200_GRAD0_opsz24.svg";
-import LectureInfo from "../../components/LectureInfo/LectureInfo";
-import LectureContent from "../../components/LectureContent/LectureContent";
+import React, { useState } from "react";
+import likeSvg from "../../icons/favorite_FILL1.svg";
+import saveSvg from "../../icons/bookmark_FILL1.svg";
+import unsaveSvg from "../../icons/bookmark_FILL0.svg";
+import unlikeSvg from "../../icons/favorite_FILL0_wght100.svg";
 import LectureDetailSidebar from "../../components/LectureDetailSidebar/LectureDetailSidebar";
+import LectureContent from "../../components/LectureContent/LectureContent"
+import LectureInfo from "../../components/LectureInfo/LectureInfo"
 
 function LectureDetail() {
   const [showDetail, setShowDetail] = useState(false);

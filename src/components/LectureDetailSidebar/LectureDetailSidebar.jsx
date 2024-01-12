@@ -1,13 +1,13 @@
 import "./LectureDetailSidebar.css";
-import timerIcon from "../../timer_FILL0_wght300_GRAD0_opsz24.svg";
-import viewIcon from "../../visibility_FILL0_wght300_GRAD0_opsz24.svg";
-import unlikeSvg from "../../favorite_FILL0_wght300_GRAD0_opsz24.svg";
-import likeSvg from "../../favorite_FILL1_wght400_GRAD0_opsz24.svg";
-import moreSvg from "../../more_horiz_FILL1_wght300_GRAD0_opsz24.svg";
-import categoryIcon from "../../sell_FILL0_wght100_GRAD0_opsz40.svg";
-import publicIcon from "../../public_FILL0_wght200_GRAD-25_opsz24.svg";
-import subCategoryIcon from "../../crossword_FILL0_wght200_GRAD-25_opsz24.svg";
-import bagIcon from "../../work_FILL0_wght100_GRAD0_opsz24.svg";
+import timerIcon from "../../icons/timer_FILL0_wght100.svg";
+import likeSvg from "../../icons/favorite_FILL1.svg";
+import categoryIcon from "../../icons/sell_FILL0.svg";
+import publicIcon from "../../icons/public_FILL0.svg";
+import moreSvg from "../../icons/more_horiz_FILL1.svg";
+import viewIcon from "../../icons/visibility_FILL0.svg";
+import subCategoryIcon from "../../icons/crossword_FILL0.svg";
+import unlikeSvg from "../../icons/favorite_FILL0_wght100.svg";
+import bagIcon from "../../icons/work_FILL0_wght100.svg";
 import { useState } from "react";
 
 function LectureDetailSidebar({ setShowDetail }) {

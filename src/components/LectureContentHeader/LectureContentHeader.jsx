@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./LectureContentHeader.css";
-import arrowIcon from "../../chevron_right_FILL0_wght200_GRAD0_opsz24.svg";
+import arrowIcon from "../../icons/chevron_FILL0.svg";
 import LectureVideoHeader from "../LectureVideoHeader/LectureVideoHeader";
 
 function LectureContentHeader() {

@@ -1,5 +1,4 @@
 import "./LectureContent.css";
-import ReactPlayer from "react-player";
 import LectureContentHeader from "../LectureContentHeader/LectureContentHeader";
 import { Scrollbar } from "react-scrollbars-custom";
 import LectureVideo from "../LectureVideo/LectureVideo";
