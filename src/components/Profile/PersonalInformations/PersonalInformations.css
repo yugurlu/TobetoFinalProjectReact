@@ -1,0 +1,61 @@
+.profile-photo {
+  position: relative;
+}
+
+.profile-photo-remove::before {
+  content: url(../../../icons/delete_FILL0.svg);
+  background-color: #fc6d6d;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  padding-top: 6px;
+  right: 52%;
+  top: 77%;
+}
+
+.profile-photo-edit::before {
+  content: url(../../../icons/edit_FILL0.svg);
+  background-color: white;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  padding-top: 6px;
+  right: 44%;
+  top: 77%;
+}
+
+.profile-photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.profile-input label {
+    font-size: 18px;
+    text-align: left;
+    color: #828282;
+}
+
+.profile-input input{
+    display: block;
+    border: 1px solid #b3a6c0;
+    border-radius: 8px;
+    width: 100%;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.profile-input input:focus{
+    outline: none !important;
+    box-shadow: 0 0 10px rgb(188, 117, 255);
+}

@@ -5,7 +5,6 @@ import { Lecture } from "../../components/Lecture/lecture";
 import Appeal from "../../components/Appeal/appeal";
 import { Announcement } from "@mui/icons-material";
 import Exam from "../../components/Exams/exam";
-import { Navbar } from "../../layouts/Navbar/navbar";
 
 function ExpandDisplay() {
   const location = useLocation();
@@ -20,7 +19,6 @@ function ExpandDisplay() {
 
   return (
     <main>
-      <Navbar/>
       <div className="container-fluid">
         <div class="page-banner-card">
           <div class="container">
