@@ -3,21 +3,21 @@ import Logo from "../path/tobeto-logo.png";
 import ProfileLogo from "../path/tobeto-profile-logo.png";
 import "./NavbarDesign.css";
 import Dropdown from "react-bootstrap/Dropdown";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
   const navigate = useNavigate();
   return (
     <nav className="navbar navbar-expand-xxl py-5 bg-white">
       <div className="container-fluid">
-        <a href="#">
+        <Link to="/">
           <span className="tobetoImage">
             <span>
               <img src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg'%20version='1.1'%20width='170'%20height='35'/>" />
             </span>
             <img className="logo" src={Logo} />
           </span>
-        </a>
+        </Link>
         <ul className="d-none d-xxl-flex navbar-nav">
           <li className="nav-item">
             <a className="nav-link nav-active">Ana Sayfa</a>

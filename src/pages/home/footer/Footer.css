@@ -1,4 +1,7 @@
 .bg-secondaryy {
+  position: relative;
+  bottom: 0;
+  width: 100%;
   --bs-bg-opacity: 1;
   background-color: #9933ff !important;
 }

@@ -14,7 +14,7 @@
   width: 2em;
   height: 2em;
   padding-top: 6px;
-  right: 52%;
+  right: 53%;
   top: 77%;
 }
 
@@ -30,7 +30,7 @@
   width: 2em;
   height: 2em;
   padding-top: 6px;
-  right: 44%;
+  right: 42%;
   top: 77%;
 }
 
@@ -38,24 +38,4 @@
   width: 150px;
   height: 150px;
   border-radius: 50%;
-}
-
-.profile-input label {
-    font-size: 18px;
-    text-align: left;
-    color: #828282;
-}
-
-.profile-input input{
-    display: block;
-    border: 1px solid #b3a6c0;
-    border-radius: 8px;
-    width: 100%;
-    padding: 10px;
-    transition: 0.5s;
-}
-
-.profile-input input:focus{
-    outline: none !important;
-    box-shadow: 0 0 10px rgb(188, 117, 255);
 }
