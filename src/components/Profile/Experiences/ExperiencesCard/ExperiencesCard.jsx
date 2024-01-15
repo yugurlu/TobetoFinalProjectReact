@@ -9,7 +9,7 @@ function ExperiencesCard() {
         </div>
         <span>Lisans</span>
       </div>
-      <div className="experiences-card-detail d-flex justify-content-between">
+      <div className="experiences-card-detail d-flex col-11 justify-content-between">
         <div className="experiences-card-detail-col">
           <span className="experiences-card-detail-header">Kurum Adi</span>
           <span className="experiences-card-detail-content">Tobeto</span>

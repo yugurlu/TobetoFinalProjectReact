@@ -26,6 +26,27 @@ function Skills() {
           <strong>Javascript</strong>
           <div className="skill-delete-button"></div>
         </div>
+        <div className="skill-card">
+          <strong>Algoritmalar</strong>
+          <div className="skill-delete-button"></div>
+        </div>
+        <div className="skill-card">
+          <strong>Forntend</strong>
+          <div className="skill-delete-button"></div>
+        </div>
+        <div className="skill-card">
+          <strong>Backend</strong>
+          <div className="skill-delete-button"></div>
+        </div>
+        <div className="skill-card">
+          <strong>.NET Core</strong>
+          <div className="skill-delete-button"></div>
+        </div>
+        <div className="skill-card">
+          <strong>ReactJs</strong>
+          <div className="skill-delete-button"></div>
+        </div>
+
       </div>
     </div>
   );

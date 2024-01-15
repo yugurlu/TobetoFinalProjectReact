@@ -28,7 +28,6 @@
 .education-card-detail-col {
   display: flex;
   flex-direction: column;
-  min-width: 200px;
 }
 
 .education-card-detail-header {
