@@ -115,7 +115,7 @@ function MainSection() {
               </li>
             </ul>
           </div>
-          <div className="col-16">
+          <div className="col-12">
             <div className="tab-content">
               {section == 0 && (
                 <div class="tab-pane fade show active">
