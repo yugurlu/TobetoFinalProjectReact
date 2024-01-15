@@ -1,22 +1,22 @@
 import { ErrorMessage, Field } from "formik";
 import React from "react";
 
-const FormikInput = (props) => {
+function FormikInput({ name, type, className, placeholder }) {
   return (
     <div>
       <Field
-        name={props.name}
-        type={props.type || "text"}
-        className={props.className}
-        placeholder={props.placeholder}
+        name={name}
+        type={type || "text"}
+        className={className}
+        placeholder={placeholder}
       />
       <div>
-        <ErrorMessage name={props.name}>
+        <ErrorMessage name={name}>
           {(message) => <span className="text-danger">{message}</span>}
         </ErrorMessage>
       </div>
     </div>
   );
-};
+}
 
 export default FormikInput;

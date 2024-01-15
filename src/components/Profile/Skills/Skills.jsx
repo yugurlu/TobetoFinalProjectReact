@@ -7,11 +7,16 @@ function Skills() {
         <div className="profile-input col-12 mb-4">
           <label>Yetkinlik</label>
           <select className="profile-input">
-            <option>Seviye Seciniz</option>
-            <option>Lisans</option>
-            <option>On Lisans</option>
-            <option>Yuksek Lisans</option>
-            <option>Doktora</option>
+            <option>Forntend</option>
+            <option>Backend</option>
+            <option>JavaScript</option>
+            <option>.NET Core</option>
+            <option>ReactJs</option>
+            <option>C#</option>
+            <option>C</option>
+            <option>C++</option>
+            <option>SQL</option>
+            <option>Algoritmalar</option>
           </select>
         </div>
       </div>
@@ -19,7 +24,7 @@ function Skills() {
       <div className="col-12 mt-5">
         <div className="skill-card">
           <strong>Javascript</strong>
-        <div className="skill-delete-button"></div>
+          <div className="skill-delete-button"></div>
         </div>
       </div>
     </div>
