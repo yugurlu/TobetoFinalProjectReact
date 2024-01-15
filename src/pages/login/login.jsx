@@ -48,7 +48,7 @@ export const Login = () => {
   };
 
   return (
-    <div className="login-base">
+    <div className="login-base" style={{ minHeight: "72.2vh" }}>
       <div className="login">
         <Formik
           initialValues={initialValues} 

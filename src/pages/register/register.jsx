@@ -34,7 +34,7 @@ export const Register = () => {
   });
 
   const submit = async (initialValues) => {
-    console.log(initialValues)
+    console.log(initialValues);
     setLoading(true);
     var request = new Request({});
     await request.axios_request
@@ -62,7 +62,7 @@ export const Register = () => {
   };
 
   return (
-    <div className="register-base">
+    <div className="register-base " style={{ minHeight: "80vh" }}>
       <div className="register">
         <Formik
           initialValues={initialValues}

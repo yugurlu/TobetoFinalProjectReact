@@ -76,7 +76,7 @@ function Profile() {
             />
           </div>
         </div>
-        <div className="col-11 col-lg-8" style={{ minHeight: "72vh" }}>
+        <div className="col-11 col-lg-8" style={{ minHeight: "72.2vh" }}>
           {section === 1 && <PersonalInformations />}
           {section === 2 && <Experiences />}
           {section === 3 && <Education />}
