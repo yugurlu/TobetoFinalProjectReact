@@ -23,28 +23,29 @@ function Experiences() {
             </div>
             <div className="profile-input col-12 col-md-6 mb-4">
               <label>Sektor*</label>
-              <FormikInput name="sector"/>
+              <FormikInput name="sector" />
             </div>
             <div className="profile-input col-12 col-md-6 mb-4">
               <label>Il*</label>
-              <FormikInput name="city"/>
+              <FormikInput name="city" />
             </div>
             <div className="profile-input col-12 col-md-6 mb-4">
               <label>Is Baslangic Tarihi</label>
-              <FormikInput name="startDate" type="date"/>
+              <FormikInput name="startDate" type="date" />
             </div>
             <div className="profile-input col-12 col-md-6 mb-4">
               <label>Is Bitisi*</label>
-              <FormikInput name="endDate" type="date"/>
-              <div className="d-flex gap-2 mt-4"/>
-                <FormikInput name="continue" type="checkbox"/>
+              <FormikInput name="endDate" type="date" />
+              <div className="d-flex gap-2 mt-4">
+                <FormikInput name="continue" type="checkbox" />
                 <small>Calismaya Devam Ediyorum</small>
               </div>
             </div>
-            <div className="big-profile-input col-12 mb-4">
-              <label>Is Aciklamasi</label>
-              <FormikInput name="description"/>
-            </div>
+          </div>
+          <div className="big-profile-input col-12 mb-4">
+            <label>Is Aciklamasi</label>
+            <FormikInput name="description" as="textarea" rows={4} />
+          </div>
           <button className="save-button">Kaydet</button>
           <div className="col-12 mt-5">
             <ExperiencesCard />

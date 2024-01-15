@@ -109,7 +109,7 @@ function LectureDetailSidebar({ setShowDetail }) {
               <strong>Enocta</strong>
             </div>
           </div>
-          <div className="">
+          <div>
             <div>
               <strong>Icerik</strong>
             </div>

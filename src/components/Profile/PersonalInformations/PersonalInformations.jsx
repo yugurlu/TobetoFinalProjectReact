@@ -112,11 +112,11 @@ function PersonalInformations() {
             </div>
             <div className="big-profile-input col-12 mb-4">
               <label>Mahalle / Sokak</label>
-              <FormikInput name="addressDetail" />
+              <FormikInput name="addressDetail" as="textarea" rows={4}/>
             </div>
             <div className="big-profile-input col-12 mb-4">
               <label>Hakkkimda</label>
-              <FormikInput name="description" />
+              <FormikInput name="description" as="textarea" rows={4}/>
             </div>
           </div>
           <button className="save-button">Kaydet</button>

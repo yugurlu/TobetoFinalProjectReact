@@ -8,7 +8,7 @@ import { Link, useNavigate } from "react-router-dom";
 export const Navbar = () => {
   const navigate = useNavigate();
   return (
-    <nav className="navbar navbar-expand-xxl py-5 bg-white">
+    <nav className="navbar navbar-expand-xxl py-4 mb-4 bg-white">
       <div className="container-fluid">
         <Link to="/">
           <span className="tobetoImage">
@@ -18,7 +18,7 @@ export const Navbar = () => {
             <img className="logo" src={Logo} />
           </span>
         </Link>
-        <ul className="d-none d-xxl-flex navbar-nav">
+        <ul className="d-none d-xxl-flex navbar-nav gap-3">
           <li className="nav-item">
             <a className="nav-link nav-active">Ana Sayfa</a>
           </li>

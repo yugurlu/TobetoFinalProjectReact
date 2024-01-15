@@ -14,12 +14,15 @@ import Experiences from "../../components/Profile/Experiences/Experiences";
 import Education from "../../components/Profile/Education/Education";
 import Skills from "../../components/Profile/Skills/Skills";
 import Certificates from "../../components/Profile/Certificates/Certificates";
+import SocialMedia from "../../components/Profile/SocialMedia/SocialMedia";
+import Languages from "../../components/Profile/Languages/Languages";
+import Password from "../../components/Profile/Password/Password";
 
 function Profile() {
   const [section, setSection] = useState(1);
 
   return (
-    <div className="container">
+    <div className="container mt-5">
       <div className="row">
         <div className="col-12 col-lg-3 mb-8 mb-lg-0">
           <div className="side-menu">
@@ -79,6 +82,9 @@ function Profile() {
           {section === 3 && <Education />}
           {section === 4 && <Skills />}
           {section === 5 && <Certificates />}
+          {section === 6 && <SocialMedia />}
+          {section === 7 && <Languages />}
+          {section === 8 && <Password />}
         </div>
       </div>
     </div>

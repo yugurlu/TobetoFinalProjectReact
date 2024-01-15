@@ -6,8 +6,8 @@ function Skills() {
       <div className="row">
         <div className="profile-input col-12 mb-4">
           <label>Yetkinlik</label>
-          <select className="profile-input">
-            <option>Forntend</option>
+          <select>
+            <option>Frontend</option>
             <option>Backend</option>
             <option>JavaScript</option>
             <option>.NET Core</option>
@@ -31,7 +31,7 @@ function Skills() {
           <div className="skill-delete-button"></div>
         </div>
         <div className="skill-card">
-          <strong>Forntend</strong>
+          <strong>Frontend</strong>
           <div className="skill-delete-button"></div>
         </div>
         <div className="skill-card">

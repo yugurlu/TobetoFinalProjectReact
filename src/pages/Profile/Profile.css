@@ -1,5 +1,7 @@
-.profile-input label {
+.profile-input label,
+.big-profile-input label {
   font-size: 16px;
+  font-weight: bolder;
   text-align: left;
   color: #828282;
 }
@@ -20,7 +22,6 @@
   border: 1px solid #b3a6c0;
   border-radius: 8px;
   width: 100%;
-  height: 150px;
   padding: 10px;
   transition: 0.5s;
 }
@@ -32,12 +33,29 @@
   box-shadow: 0 0 10px rgb(188, 117, 255);
 }
 
+.big-profile-input input:focus,
+.big-profile-input textarea:focus,
+.big-profile-input select:focus {
+  outline: none !important;
+  box-shadow: 0 0 10px rgb(188, 117, 255);
+}
+
 .save-button {
   color: white;
   border: none;
   min-width: 150px;
   height: 35px;
   background-color: #93f;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.delete-button {
+  color: white;
+  border: none;
+  min-width: 150px;
+  height: 35px;
+  background-color: #fc5c46;
   border-radius: 20px;
   transition: 0.4s;
 }
