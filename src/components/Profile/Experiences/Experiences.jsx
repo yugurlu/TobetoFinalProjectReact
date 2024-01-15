@@ -19,33 +19,32 @@ function Experiences() {
             </div>
             <div className="profile-input col-12 col-md-6 mb-4">
               <label>Pozisyon*</label>
-              <FormikInput name="position"></FormikInput>
+              <FormikInput name="position" />
             </div>
             <div className="profile-input col-12 col-md-6 mb-4">
               <label>Sektor*</label>
-              <FormikInput name="sector"></FormikInput>
+              <FormikInput name="sector"/>
             </div>
             <div className="profile-input col-12 col-md-6 mb-4">
               <label>Il*</label>
-              <FormikInput name="city"></FormikInput>
+              <FormikInput name="city"/>
             </div>
             <div className="profile-input col-12 col-md-6 mb-4">
               <label>Is Baslangic Tarihi</label>
-              <FormikInput name="startDate" type="date"></FormikInput>
+              <FormikInput name="startDate" type="date"/>
             </div>
             <div className="profile-input col-12 col-md-6 mb-4">
               <label>Is Bitisi*</label>
-              <FormikInput name="endDate" type="date"></FormikInput>
-              <div className="d-flex gap-4 mt-4">
-                <FormikInput name="continue" type="checkbox"></FormikInput>
+              <FormikInput name="endDate" type="date"/>
+              <div className="d-flex gap-2 mt-4"/>
+                <FormikInput name="continue" type="checkbox"/>
                 <small>Calismaya Devam Ediyorum</small>
               </div>
             </div>
             <div className="big-profile-input col-12 mb-4">
               <label>Is Aciklamasi</label>
-              <FormikInput name="description"></FormikInput>
+              <FormikInput name="description"/>
             </div>
-          </div>
           <button className="save-button">Kaydet</button>
           <div className="col-12 mt-5">
             <ExperiencesCard />

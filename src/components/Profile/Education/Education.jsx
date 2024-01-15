@@ -30,16 +30,16 @@ function Education() {
             </div>
             <div className="profile-input col-12 col-md-6 mb-4">
               <label>Bolum*</label>
-              <FormikInput name="branch"></FormikInput>
+              <FormikInput name="branch" />
             </div>
             <div className="profile-input col-12 col-md-6 mb-4">
               <label>Baslangic Yili*</label>
-              <FormikInput name="startDate" type="date"></FormikInput>
+              <FormikInput name="startDate" type="date" />
             </div>
             <div className="profile-input col-12 col-md-6 mb-4">
               <label>Mezunuyet Yili*</label>
               <FormikInput name="graduationDate" />
-              <div className="d-flex gap-4 mt-4">
+              <div className="d-flex gap-2 mt-4">
                 <FormikInput name="continue" type="checkbox" />
                 <small>Devam Ediyorum</small>
               </div>

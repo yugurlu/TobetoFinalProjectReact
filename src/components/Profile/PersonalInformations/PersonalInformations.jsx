@@ -3,8 +3,15 @@ import "./PersonalInformations.css";
 import * as Yup from "yup";
 import "yup-phone-lite";
 import { Form, Formik } from "formik";
+import { useRef } from "react";
 
 function PersonalInformations() {
+  const fileInputRef = useRef(null);
+
+  const handleEditImageClick = () => {
+    fileInputRef.current.click();
+  };
+
   const initialValues = {
     name: "",
     surname: "",
@@ -54,7 +61,17 @@ function PersonalInformations() {
               <div className="profile-photo">
                 <img src="https://pbs.twimg.com/profile_images/1697250796906348546/JAYDV2ix_400x400.jpg"></img>
                 <div className="profile-photo-remove"></div>
-                <div className="profile-photo-edit"></div>
+                <div
+                  className="profile-photo-edit"
+                  onClick={handleEditImageClick}
+                >
+                  <input
+                    type="file"
+                    accept="image/png, image/gif, image/jpeg"
+                    ref={fileInputRef}
+                    style={{ display: "none" }}
+                  />
+                </div>
               </div>
             </div>
             <div className="profile-input col-12 col-md-6 mb-4">
