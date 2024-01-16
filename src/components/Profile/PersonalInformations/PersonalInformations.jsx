@@ -39,11 +39,10 @@ function PersonalInformations() {
     phone: Yup.string()
       .phone("TR", "Lutfen Gecerli Bir Telefon Numarasi Giriniz")
       .required("Doldurulması zorunlu alan*"),
-    nationalIdentity: Yup.number()
+    nationalIdentity: Yup.string()
       .required("*Aboneliklerde fatura için doldurulması zorunlu alan")
       .typeError("*Aboneliklerde fatura için doldurulması zorunlu alan")
-      .min(11, "Lutfen Gecerli Bir TC Kimlik Numarasi Giriniz")
-      .max(11, "Lutfen Gecerli Bir TC Kimlik Numarasi Giriniz"),
+      .matches(/^[0-9]{11}$/, "Lütfen Geçerli Bir TC Kimlik Numarası Giriniz"),
   });
 
   return (
@@ -76,7 +75,7 @@ function PersonalInformations() {
             </div>
             <div className="profile-input col-12 col-md-6 mb-4">
               <label>Adiniz*</label>
-              <FormikInput name="name" label="Adiniz*" />
+              <FormikInput name="name" label="Adiniz*"/>
             </div>
             <div className="profile-input col-12 col-md-6 mb-4">
               <label>Soyadiniz*</label>
@@ -112,11 +111,11 @@ function PersonalInformations() {
             </div>
             <div className="big-profile-input col-12 mb-4">
               <label>Mahalle / Sokak</label>
-              <FormikInput name="addressDetail" as="textarea" rows={4}/>
+              <FormikInput name="addressDetail" as="textarea" rows={4} />
             </div>
             <div className="big-profile-input col-12 mb-4">
               <label>Hakkkimda</label>
-              <FormikInput name="description" as="textarea" rows={4}/>
+              <FormikInput name="description" as="textarea" rows={4} />
             </div>
           </div>
           <button className="save-button">Kaydet</button>

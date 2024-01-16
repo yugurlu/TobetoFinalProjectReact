@@ -139,10 +139,26 @@ function MainSection() {
               {section == 1 && (
                 <div class="tab-pane fade show active">
                   <div className="grid-container">
-                    <Lecture></Lecture>
-                    <Lecture></Lecture>
-                    <Lecture></Lecture>
-                    <Lecture></Lecture>
+                    <Lecture
+                      name="İstanbul Kodluyor Proje Aşamaları"
+                      date="31 Ağustos 2023 13:01"
+                      img="https://tobeto.s3.cloud.ngn.com.tr/23_IKP_b4846af652.jpg"
+                    ></Lecture>
+                    <Lecture
+                      name="İstanbul Kodluyor Proje Aşamaları"
+                      date="31 Ağustos 2023 13:01"
+                      img="https://tobeto.s3.cloud.ngn.com.tr/23_IKP_b4846af652.jpg"
+                    ></Lecture>
+                    <Lecture
+                      name="İstanbul Kodluyor Proje Aşamaları"
+                      date="31 Ağustos 2023 13:01"
+                      img="https://tobeto.s3.cloud.ngn.com.tr/23_IKP_b4846af652.jpg"
+                    ></Lecture>
+                    <Lecture
+                      name="İstanbul Kodluyor Proje Aşamaları"
+                      date="31 Ağustos 2023 13:01"
+                      img="https://tobeto.s3.cloud.ngn.com.tr/23_IKP_b4846af652.jpg"
+                    ></Lecture>
                     {data.lectures.map((lecture) => {
                       return <Lecture lecture={lecture} />;
                     })}

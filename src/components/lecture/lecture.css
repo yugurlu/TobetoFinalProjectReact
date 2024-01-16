@@ -13,6 +13,7 @@
 
 .edu-card:hover
 {
+    scale: 1.04;
     border-color: #9933ff;
 }
 
